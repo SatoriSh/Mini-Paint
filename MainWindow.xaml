@@ -1,0 +1,47 @@
+﻿<Window x:Class="Mini_Paint.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mini_Paint"
+        mc:Ignorable="d"
+        Title="Mini Paint" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TabControl VerticalAlignment="Top">
+            <TabItem  x:Name="tabItem1" Header="Canvas">
+
+                <InkCanvas Background="White" x:Name="canvas" Height="405" Margin="0,0,-3,0" >
+
+                </InkCanvas>
+
+            </TabItem>
+            <TabItem x:Name="tabItem2" Header="Settings">
+                <TreeView>
+
+                    <TreeViewItem x:Name="backgroundCanvas" Header="Background canvas color" >
+                        <TreeViewItem x:Name="bcYellow" Header="Yellow" Selected="colorSelectedYellow"></TreeViewItem>
+                        <TreeViewItem x:Name="bcWhite" Header="White" Selected="colorSelectedWhite"></TreeViewItem>
+                        <TreeViewItem x:Name="bcGreen" Header="Green" Selected="colorSelectedGreen"></TreeViewItem>
+                        <TreeViewItem x:Name="bcBlue" Header="Blue" Selected="colorSelectedBlue"></TreeViewItem>
+                        <TreeViewItem x:Name="bcRed" Header="Red" Selected="colorSelectedRed"></TreeViewItem>
+                    </TreeViewItem>
+
+                    <TreeViewItem x:Name="language" Header="Language" >
+                        <TreeViewItem Header="English" Selected="languageSettingsSelectedEn"></TreeViewItem>
+                        <TreeViewItem Header="Русский" Selected="languageSettingsSelectedRu"></TreeViewItem>
+                    </TreeViewItem>
+
+                </TreeView>
+            </TabItem>           
+        </TabControl>
+
+        <Button Click="saveButton" Margin="727,22,0,361" Grid.ColumnSpan="2" Content="Save" FontSize="20" x:Name="saveProj"/>
+        <Button Click="loadButton" Margin="727,73,0,307" Grid.ColumnSpan="2" Content="Load" FontSize="20" x:Name="loadProj"/>
+        <Button Click="clearButton" Margin="727,127,0,253" Grid.ColumnSpan="2" Content="Clear" FontSize="20" x:Name="clearProj"/>
+
+    </Grid>
+</Window>
