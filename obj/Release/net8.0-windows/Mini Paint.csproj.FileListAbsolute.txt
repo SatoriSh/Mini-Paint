@@ -1,0 +1,21 @@
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\bin\Release\net8.0-windows\Mini Paint.exe
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\bin\Release\net8.0-windows\Mini Paint.deps.json
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\bin\Release\net8.0-windows\Mini Paint.runtimeconfig.json
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\bin\Release\net8.0-windows\Mini Paint.dll
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\bin\Release\net8.0-windows\Mini Paint.pdb
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\MainWindow.g.cs
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\App.g.cs
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint_MarkupCompile.cache
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint_MarkupCompile.lref
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\MainWindow.baml
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.g.resources
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.AssemblyInfoInputs.cache
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.AssemblyInfo.cs
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.csproj.CoreCompileInputs.cache
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.sourcelink.json
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.dll
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\refint\Mini Paint.dll
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.pdb
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\Mini Paint.genruntimeconfig.cache
+C:\Users\ShuKu\source\repos\WPF\Mini Paint\obj\Release\net8.0-windows\ref\Mini Paint.dll

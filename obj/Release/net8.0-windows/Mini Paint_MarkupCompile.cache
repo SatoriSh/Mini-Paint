@@ -1,5 +1,5 @@
 ﻿Mini Paint
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Users\ShuKu\source\repos\WPF\Mini Paint\App.xaml
 11407045341
 
-6-1521044260
+4-2060540413
 198-556154604
 MainWindow.xaml;
 
-True
+False
 

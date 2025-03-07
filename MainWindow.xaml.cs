@@ -55,7 +55,7 @@ namespace Mini_Paint
         private void saveButton(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "InkCnavas Format|*.sandy";
+            saveFileDialog.Filter = "InkCnavas Format|*.png";
             saveFileDialog.Title = "Save InkCanvas File";
             saveFileDialog.ShowDialog();
             if (saveFileDialog.FileName == "") return;
@@ -63,12 +63,13 @@ namespace Mini_Paint
             canvas.Strokes.Save(fs);
             fs.Close();
         }
+
         private void loadButton(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Load InkCanvas File";
-            openFileDialog.DefaultExt = "sandy";
-            openFileDialog.Filter = "InkCanvas Format(.sandy)|*.sandy";
+            openFileDialog.DefaultExt = "png";
+            openFileDialog.Filter = "InkCanvas Format(.png)|*.png";
             openFileDialog.ShowDialog();
             if (openFileDialog.FileName == "") return;
             FileStream fs = File.Open(openFileDialog.FileName, FileMode.Open);

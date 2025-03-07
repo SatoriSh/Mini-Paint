@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ShuKu\\source\\repos\\WPF with Metanit\\Mini Paint\\Mini Paint.csproj",
+      "projectUniqueName": "C:\\Users\\ShuKu\\source\\repos\\WPF\\Mini Paint\\Mini Paint.csproj",
       "projectName": "Mini Paint",
-      "projectPath": "C:\\Users\\ShuKu\\source\\repos\\WPF with Metanit\\Mini Paint\\Mini Paint.csproj",
+      "projectPath": "C:\\Users\\ShuKu\\source\\repos\\WPF\\Mini Paint\\Mini Paint.csproj",
       "packagesPath": "C:\\Users\\ShuKu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ShuKu\\source\\repos\\WPF with Metanit\\Mini Paint\\obj\\",
+      "outputPath": "C:\\Users\\ShuKu\\source\\repos\\WPF\\Mini Paint\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VIS3\\NuGetPackages"
