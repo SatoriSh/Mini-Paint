@@ -5,16 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mini_Paint"
         mc:Ignorable="d"
-        Title="Mini Paint" Height="450" Width="800">
+        Title="Mini Paint" Height="1080" Width="1920"
+        WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="0.1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TabControl VerticalAlignment="Top">
-            <TabItem  x:Name="tabItem1" Header="Canvas">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"></RowDefinition>
+            <RowDefinition Height="55*"></RowDefinition>
+            <RowDefinition Height="55*"></RowDefinition>
+            <RowDefinition Height="55*"></RowDefinition>
+            <RowDefinition Height="200*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TabControl VerticalAlignment="Top" HorizontalAlignment="Stretch" Grid.RowSpan="5">
+            <TabItem x:Name="tabItem1" Header="Canvas">
 
-                <InkCanvas Background="White" x:Name="canvas" Height="405" Margin="0,0,-3,0" >
+                <InkCanvas Grid.RowSpan="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White" x:Name="canvas" Width="1920" Height="1080" Margin="3,3,3,3" >
 
                 </InkCanvas>
 
@@ -36,12 +44,12 @@
                     </TreeViewItem>
 
                 </TreeView>
-            </TabItem>           
+            </TabItem>
         </TabControl>
 
-        <Button Click="saveButton" Margin="727,22,0,361" Grid.ColumnSpan="2" Content="Save" FontSize="20" x:Name="saveProj"/>
-        <Button Click="loadButton" Margin="727,73,0,307" Grid.ColumnSpan="2" Content="Load" FontSize="20" x:Name="loadProj"/>
-        <Button Click="clearButton" Margin="727,127,0,253" Grid.ColumnSpan="2" Content="Clear" FontSize="20" x:Name="clearProj"/>
+        <Button Click="saveButton" MaxWidth="70" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Content="Save" FontSize="20" x:Name="saveProj" Height="31"/>
+        <Button Click="loadButton" MaxWidth="70" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Content="Load" FontSize="20" x:Name="loadProj" Height="31"/>
+        <Button Click="clearButton" MaxWidth="70" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Content="Clear" FontSize="20" x:Name="clearProj" Height="31"/>
 
     </Grid>
 </Window>
