@@ -5,6 +5,8 @@ using Microsoft.Win32;
 using Microsoft.VisualBasic;
 using System.Windows.Ink;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Controls;
 
 namespace Mini_Paint
 {
@@ -55,27 +57,55 @@ namespace Mini_Paint
         private void saveButton(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "InkCnavas Format|*.png";
-            saveFileDialog.Title = "Save InkCanvas File";
+            saveFileDialog.Filter = "PNG Image|*.png";
+            saveFileDialog.Title = "Save InkCanvas as PNG";
             saveFileDialog.ShowDialog();
-            if (saveFileDialog.FileName == "") return;
-            FileStream fs = File.Open(saveFileDialog.FileName, FileMode.OpenOrCreate);
-            canvas.Strokes.Save(fs);
-            fs.Close();
+
+            if (string.IsNullOrEmpty(saveFileDialog.FileName)) return;
+
+            // Создаем RenderTargetBitmap для рендеринга InkCanvas
+            RenderTargetBitmap rtb = new RenderTargetBitmap(
+                (int)canvas.ActualWidth,
+                (int)canvas.ActualHeight,
+                96, 96, PixelFormats.Pbgra32);
+
+            // Рендерим InkCanvas в растровое изображение
+            rtb.Render(canvas);
+
+            // Создаем кодировщик PNG
+            PngBitmapEncoder pngEncoder = new PngBitmapEncoder();
+            pngEncoder.Frames.Add(BitmapFrame.Create(rtb));
+
+            // Сохраняем изображение в файл
+            using (FileStream fs = File.Open(saveFileDialog.FileName, FileMode.Create))
+            {
+                pngEncoder.Save(fs);
+            }
         }
 
         private void loadButton(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Load InkCanvas File";
-            openFileDialog.DefaultExt = "png";
-            openFileDialog.Filter = "InkCanvas Format(.png)|*.png";
+            openFileDialog.Filter = "PNG Image|*.png";
+            openFileDialog.Title = "Load PNG Image";
             openFileDialog.ShowDialog();
-            if (openFileDialog.FileName == "") return;
-            FileStream fs = File.Open(openFileDialog.FileName, FileMode.Open);
-            StrokeCollection myStrk = new StrokeCollection(fs);
-            canvas.Strokes = myStrk;
-            fs.Close();
+
+            if (string.IsNullOrEmpty(openFileDialog.FileName)) return;
+
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(openFileDialog.FileName);
+            bitmap.EndInit();
+
+            // Очистка InkCanvas
+            canvas.Strokes.Clear();
+
+            // Отображение PNG как изображения
+            Image image = new Image();
+            image.Source = bitmap;
+
+            // Добавление изображения на InkCanvas
+            canvas.Children.Add(image);
         }
 
         private void clearButton(object sender, RoutedEventArgs e)
